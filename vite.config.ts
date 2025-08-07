@@ -22,7 +22,7 @@ const config = defineConfig(({mode}) => {
         },
         test: {
             alias: {
-                '@src': path.resolve(import.meta.dirname, './src/ts/')
+                '@src': path.resolve(import.meta.dirname, './src/')
             },
             browser: {
                 enabled: true,
