@@ -7,14 +7,11 @@ import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
     {
-        ignores: ['*.{js,cjs,mjs,jsx,cjsx,mjsx}']
+        ignores: ['*.{js,cjs,mjs}']
     },
     {
         languageOptions: {
             parserOptions: {
-                ecmaFeatures: {
-                    jsx: true
-                },
                 projectService: true,
                 tsconfigRootDir: import.meta.dirname
             }
