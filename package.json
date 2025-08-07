@@ -75,6 +75,7 @@
     },
     "dependencies": {
         "@fontsource/roboto": "^5.2.6",
-        "@fontsource/roboto-mono": "^5.2.6"
+        "@fontsource/roboto-mono": "^5.2.6",
+        "@tabler/icons": "^3.34.1"
     }
 }
