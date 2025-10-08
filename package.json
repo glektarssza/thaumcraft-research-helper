@@ -61,7 +61,7 @@
         "@vitest/coverage-istanbul": "^3.2.4",
         "@vitest/ui": "^3.2.4",
         "del-cli": "^6.0.0",
-        "eslint": "^9.33.0",
+        "eslint": "^9.37.0",
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-tsdoc": "^0.4.0",
         "playwright": "^1.55.0",
