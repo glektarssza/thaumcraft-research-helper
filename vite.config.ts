@@ -4,6 +4,7 @@ import path from 'node:path';
 
 //-- NPM Packages
 import replacePlugin from '@rollup/plugin-replace';
+import {playwright as browserPlaywright} from '@vitest/browser-playwright';
 import {type ViteUserConfig, defineConfig} from 'vitest/config';
 
 const config = defineConfig(({mode}) => {
@@ -26,7 +27,7 @@ const config = defineConfig(({mode}) => {
             },
             browser: {
                 enabled: true,
-                provider: 'playwright',
+                provider: browserPlaywright(),
                 instances: [
                     {
                         browser: 'chromium',
@@ -43,7 +44,6 @@ const config = defineConfig(({mode}) => {
             maxConcurrency: Math.max(Math.floor(os.cpus().length / 2), 1),
             coverage: {
                 enabled: true,
-                all: true,
                 provider: 'istanbul',
                 reporter: ['text'],
                 exclude: [
