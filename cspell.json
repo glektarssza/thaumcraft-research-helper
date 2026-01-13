@@ -10,8 +10,15 @@
     "enableGlobDot": true,
     "useGitignore": true,
     "gitignoreRoot": ["."],
+    "ignorePaths": ["pnpm-lock.yaml", ".git"],
     "caseSensitive": false,
     "loadDefaultConfiguration": true,
     "unknownWords": "report-all",
-    "readonly": true
+    "readonly": true,
+    "cache": {
+        "useCache": false,
+        "cacheFormat": "universal",
+        "cacheLocation": ".cspell/.cspell_cache",
+        "cacheStrategy": "content"
+    }
 }
