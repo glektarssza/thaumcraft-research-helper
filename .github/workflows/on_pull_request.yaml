@@ -44,5 +44,7 @@ jobs:
   spell-check:
     name: Spell Check
     uses: ./.github/workflows/spell-check.yaml
+    with:
+      ref: ${{github.ref}}
     secrets:
       github-token: ${{secrets.GITHUB_TOKEN}}
