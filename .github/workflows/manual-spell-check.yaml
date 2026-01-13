@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Manual Spell Check
+on:
+  workflow_dispatch:
+jobs:
+  manual_spell_check:
+    name: Manual Spell Check
+    permissions:
+      #-- To clone the repository
+      contents: read
+    uses: ./.github/workflows/spell-check.yaml
+    with:
+      ref: ${{github.ref}}
+    secrets:
+      github-token: ${{secrets.GITHUB_TOKEN}}
