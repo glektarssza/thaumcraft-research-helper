@@ -47,7 +47,7 @@ node_modules/
 .eslintcache
 
 # Artifacts #
-## Distributables ##
+## Distribution Files ##
 dist/
 
 ## Coverage ##

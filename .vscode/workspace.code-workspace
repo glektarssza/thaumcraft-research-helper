@@ -28,19 +28,19 @@
             "editor.formatOnPaste": true,
             "editor.formatOnSave": true,
             "editor.formatOnSaveMode": "modificationsIfAvailable",
-            "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
         "[jsonc]": {
             "editor.formatOnPaste": true,
             "editor.formatOnSave": true,
             "editor.formatOnSaveMode": "modificationsIfAvailable",
-            "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
         "[jsonl]": {
             "editor.formatOnPaste": true,
             "editor.formatOnSave": true,
             "editor.formatOnSaveMode": "modificationsIfAvailable",
-            "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
         "[less]": {
             "editor.formatOnPaste": true,
