@@ -71,7 +71,7 @@
         "@faker-js/faker": "^10.2.0",
         "@playwright/test": "^1.57.0",
         "@rollup/plugin-replace": "^6.0.3",
-        "@tsconfig/node24": "^24.0.1",
+        "@tsconfig/node24": "^24.0.3",
         "@types/jsdom": "^27.0.0",
         "@types/node": "^25.0.8",
         "@vitejs/plugin-vue": "6.0.3",
