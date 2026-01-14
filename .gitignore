@@ -46,6 +46,9 @@ node_modules/
 ## ESLint ##
 .eslintcache
 
+## CSpell ##
+.cspell/.cache
+
 # Artifacts #
 ## Distribution Files ##
 dist/

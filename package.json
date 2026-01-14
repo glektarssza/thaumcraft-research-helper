@@ -39,6 +39,8 @@
         "prettier": "prettier --config ./.prettierrc.mjs --ignore-path ./.prettierignore --ignore-path ./.gitignore --cache --check .",
         "prettier:fix": "prettier --config ../.prettierrc.mjs --ignore-path ./.prettierignore --ignore-path ./.gitignore --cache --write .",
         "prettier:ci": "prettier --config ./.prettierrc.mjs --ignore-path ./.prettierignore --ignore-path ./.gitignore --check .",
+        "cspell": "cspell --cache --no-must-find-files --config cspell.json .",
+        "cspell:ci": "cspell --no-cache --no-must-find-files --fail-fast --config cspell.json .",
         "build": "pnpm run build:prod",
         "build:all": "pnpm run build:production && pnpm run build:development",
         "build:prod": "pnpm run build:production",

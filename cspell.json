@@ -18,7 +18,7 @@
     "cache": {
         "useCache": false,
         "cacheFormat": "universal",
-        "cacheLocation": ".cspell/.cspell_cache",
+        "cacheLocation": ".cspell/.cache",
         "cacheStrategy": "content"
     }
 }
