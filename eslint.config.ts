@@ -3,7 +3,7 @@ import {
     defineConfigWithVueTs,
     vueTsConfigs
 } from '@vue/eslint-config-typescript';
-import {defineConfig, globalIgnores} from 'eslint/config';
+import {globalIgnores} from 'eslint/config';
 import eslint from '@eslint/js';
 import pluginPlaywright from 'eslint-plugin-playwright';
 import pluginVitest from '@vitest/eslint-plugin';
