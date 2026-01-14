@@ -66,6 +66,12 @@
             "editor.formatOnSaveMode": "modificationsIfAvailable",
             "editor.defaultFormatter": "dbaeumer.vscode-eslint"
         },
+        "[vue]": {
+            "editor.formatOnPaste": true,
+            "editor.formatOnSave": true,
+            "editor.formatOnSaveMode": "modificationsIfAvailable",
+            "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+        },
         "eslint.codeActionsOnSave.mode": "all",
         "eslint.enable": true,
         "eslint.format.enable": true,
