@@ -1,15 +1,13 @@
-// @ts-check
-
 //-- NPM Packages
+import {defineConfig, globalIgnores} from 'eslint/config';
 import eslint from '@eslint/js';
-import {defineConfig} from 'eslint/config';
-import prettierConfig from 'eslint-config-prettier';
+import pluginPlaywright from 'eslint-plugin-playwright';
+import pluginVitest from '@vitest/eslint-plugin';
+import pluginPrettier from 'eslint-plugin-prettier/recommended';
 import tseslint from 'typescript-eslint';
 
 export default defineConfig(
-    {
-        ignores: ['*.{js,cjs,mjs}']
-    },
+    globalIgnores(['*.{js,cjs,mjs}']),
     {
         languageOptions: {
             parserOptions: {
@@ -20,7 +18,15 @@ export default defineConfig(
     },
     eslint.configs.recommended,
     ...tseslint.configs.recommendedTypeChecked,
-    prettierConfig,
+    pluginPrettier,
+    {
+        ...pluginVitest.configs.recommended,
+        files: ['src/**/__tests__/*']
+    },
+    {
+        ...pluginPlaywright.configs['flat/recommended'],
+        files: ['e2e/**/*.{test,spec}.{js,ts,jsx,tsx}']
+    },
     {
         files: ['**/tests/*.ts', '**/tests/**/*.ts'],
         rules: {
