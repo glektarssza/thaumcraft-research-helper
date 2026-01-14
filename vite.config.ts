@@ -85,7 +85,9 @@ const config = defineConfig(({mode}) => {
         },
         plugins: [
             vue(),
-            vueDevTools(),
+            vueDevTools({
+                launchEditor: process.env['VITE_EDITOR'] ?? 'code'
+            }),
             replacePlugin({
                 preventAssignment: true,
                 values: {
