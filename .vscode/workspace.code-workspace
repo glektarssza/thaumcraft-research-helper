@@ -79,6 +79,10 @@
         "prettier.prettierPath": "node_modules/prettier",
         "prettier.resolveGlobalModules": false,
         "prettier.requireConfig": true,
-        "prettier.useEditorConfig": true
+        "prettier.useEditorConfig": true,
+        "terminal.integrated.env.linux": {
+            "VITE_EDITOR": "code-insiders",
+            "VITEST_VSCODE": "true"
+        }
     }
 }
