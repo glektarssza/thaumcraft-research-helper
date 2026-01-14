@@ -29,7 +29,7 @@
         "dev": "vite serve --mode development",
         "preview": "vite preview",
         "test": "run-p test:unit test:e2e",
-        "test:ci": "run-p test:unit:ci test:e2e",
+        "test:ci": "run-p test:unit:ci test:e2e:ci",
         "test:unit": "vitest --run --coverage",
         "test:unit:ci": "vitest --run --coverage",
         "test:unit:ui": "vitest --ui",
