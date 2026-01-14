@@ -1,4 +1,14 @@
 # Editors #
+## Visual Studio Code ##
+### Workspace Folder ###
+.vscode/**
+
+### Exceptions ###
+!.vscode/*.code-workspace
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
 ## Vim ##
 ### Swap ###
 [._]*.s[a-v][a-z]
@@ -37,7 +47,7 @@ node_modules/
 .eslintcache
 
 # Artifacts #
-## Distributables ##
+## Distribution Files ##
 dist/
 
 ## Coverage ##

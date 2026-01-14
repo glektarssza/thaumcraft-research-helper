@@ -85,7 +85,7 @@ jobs:
         name: Test
         run: pnpm run test:ci
       - id: upload-artifacts
-        name: Upload covrerage artifacts
+        name: Upload coverage artifacts
         if: inputs.upload-artifacts
         uses: actions/upload-artifact@v6
         with:
