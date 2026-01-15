@@ -7,6 +7,7 @@
         "github.vscode-github-actions",
         "esbenp.prettier-vscode",
         "dbaeumer.vscode-eslint",
+        "vitest.explorer",
         "ms-playwright.playwright",
         "Vue.volar"
     ]
