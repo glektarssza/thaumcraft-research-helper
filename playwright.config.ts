@@ -8,8 +8,8 @@ export default defineConfig({
         timeout: 5000
     },
     forbidOnly: !!process.env.CI,
-    retries: process.env.CI ? 2 : 0,
-    workers: process.env.CI ? 1 : undefined,
+    retries: process.env.CI !== undefined ? 2 : 0,
+    workers: process.env.CI !== undefined ? 1 : undefined,
     reporter: 'html',
     use: {
         actionTimeout: 0,
@@ -34,8 +34,8 @@ export default defineConfig({
     ],
     outputDir: '.playwright',
     webServer: {
-        command: process.env.CI ? 'pnpm run preview' : 'pnpm run dev',
-        port: process.env.CI ? 4173 : 5173,
-        reuseExistingServer: !process.env.CI
+        command: process.env.CI !== undefined ? 'pnpm run preview' : 'pnpm run dev',
+        port: process.env.CI !== undefined ? 4173 : 5173,
+        reuseExistingServer: process.env.CI !== undefined ? false : true
     }
 });
