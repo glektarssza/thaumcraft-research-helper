@@ -55,3 +55,7 @@ dist/
 
 ## Coverage ##
 coverage/
+
+## Playwright ##
+.playwright/
+playwright-report/

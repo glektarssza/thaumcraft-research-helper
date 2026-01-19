@@ -362,6 +362,11 @@
             "type": "shell",
             "command": "pnpm",
             "args": ["run", "test"],
+            "options": {
+                "env": {
+                    "VITEST_VSCODE": "true"
+                }
+            },
             "runOptions": {
                 "instanceLimit": 1,
                 "reevaluateOnRerun": true,
@@ -396,6 +401,11 @@
             "type": "shell",
             "command": "pnpm",
             "args": ["run", "test:ui"],
+            "options": {
+                "env": {
+                    "VITEST_VSCODE": "true"
+                }
+            },
             "runOptions": {
                 "instanceLimit": 1,
                 "reevaluateOnRerun": true,
@@ -448,6 +458,11 @@
             "type": "shell",
             "command": "pnpm",
             "args": ["run", "dev"],
+            "options": {
+                "env": {
+                    "VITEST_VSCODE": "true"
+                }
+            },
             "runOptions": {
                 "instanceLimit": 1,
                 "reevaluateOnRerun": true,

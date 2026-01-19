@@ -1,17 +1,23 @@
 //-- NodeJS
 import os from 'node:os';
 import path from 'node:path';
+import url from 'node:url';
 
 //-- NPM Packages
-import replacePlugin from '@rollup/plugin-replace';
 import {playwright as browserPlaywright} from '@vitest/browser-playwright';
-import {type ViteUserConfig, defineConfig} from 'vitest/config';
+import {type ViteUserConfig, defineConfig, configDefaults} from 'vitest/config';
+import replacePlugin from '@rollup/plugin-replace';
+import vue from '@vitejs/plugin-vue';
+import vueDevTools from 'vite-plugin-vue-devtools';
 
 const config = defineConfig(({mode}) => {
     const conf: ViteUserConfig = {
         mode,
         resolve: {
-            extensions: ['.ts', '.js']
+            extensions: ['.ts', '.js'],
+            alias: {
+                '@': url.fileURLToPath(new URL('./src/ts/', import.meta.url))
+            }
         },
         base: mode !== 'development' ? '/thaumcraft-research-helper/' : '/',
         root: path.resolve(import.meta.dirname, './src/'),
@@ -25,6 +31,8 @@ const config = defineConfig(({mode}) => {
             alias: {
                 '@src': path.resolve(import.meta.dirname, './src/ts/')
             },
+            exclude: [...configDefaults.exclude, 'e2e/**'],
+            environment: 'jsdom',
             browser: {
                 enabled: true,
                 provider: browserPlaywright(),
@@ -39,7 +47,7 @@ const config = defineConfig(({mode}) => {
             clearMocks: true,
             unstubGlobals: true,
             unstubEnvs: true,
-            dir: './tests/',
+            dir: './src/ts/',
             name: 'Thaumcraft Research Helper',
             maxConcurrency: Math.max(Math.floor(os.cpus().length / 2), 1),
             coverage: {
@@ -76,6 +84,10 @@ const config = defineConfig(({mode}) => {
             }
         },
         plugins: [
+            vue(),
+            vueDevTools({
+                launchEditor: process.env['VITE_EDITOR'] ?? 'code'
+            }),
             replacePlugin({
                 preventAssignment: true,
                 values: {

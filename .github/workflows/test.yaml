@@ -81,6 +81,12 @@ jobs:
       - id: install-dependencies
         name: Install dependencies
         run: pnpm install
+      - id: install-playwright
+        name: Install Playwright
+        run: pnpm exec playwright install
+      - id: build
+        name: Build
+        run: pnpm run build:prod
       - id: test
         name: Test
         run: pnpm run test:ci
