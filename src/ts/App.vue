@@ -2,8 +2,10 @@
     // TODO
 </script>
 <template lang="pug">
-    // TODO
+    h1#hello-world Hello world!
 </template>
 <style lang="scss" scoped>
-    // TODO
+    h1 {
+        color: red;
+    }
 </style>
