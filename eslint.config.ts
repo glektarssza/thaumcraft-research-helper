@@ -1,15 +1,24 @@
 //-- NPM Packages
-import {
-    defineConfigWithVueTs,
-    vueTsConfigs
-} from '@vue/eslint-config-typescript';
 import globals from 'globals';
 import eslint from '@eslint/js';
+import tseslint from 'typescript-eslint';
+import configsPrettier from 'eslint-config-prettier';
+import configsPrettierVue from '@vue/eslint-config-prettier';
+import {
+    configureVueProject,
+    defineConfigWithVueTs,
+    vueTsConfigs as configsVueTypescript
+} from '@vue/eslint-config-typescript';
 import pluginPlaywright from 'eslint-plugin-playwright';
 import pluginVitest from '@vitest/eslint-plugin';
 import pluginVue from 'eslint-plugin-vue';
-import prettierConfig from 'eslint-config-prettier';
-import tseslint from 'typescript-eslint';
+
+configureVueProject({
+    tsSyntaxInTemplates: true,
+    scriptLangs: ['ts'],
+    allowComponentTypeUnsafety: true,
+    rootDir: import.meta.dirname
+});
 
 export default defineConfigWithVueTs(
     {
@@ -26,45 +35,31 @@ export default defineConfigWithVueTs(
         }
     },
     eslint.configs.recommended,
-    ...tseslint.configs.recommendedTypeChecked,
-    prettierConfig,
+    tseslint.configs.recommendedTypeChecked,
+    configsPrettier,
+    pluginVue.configs['flat/recommended'],
+    configsVueTypescript.recommendedTypeChecked,
     {
         files: ['**/tests/*.ts', '**/tests/**/*.ts'],
-        rules: {
-            '@typescript-eslint/no-unused-expressions': 'off'
+        languageOptions: {
+            globals: {
+                ...globals.vitest
+            }
         },
+        rules: {
+            ...pluginVitest.configs.recommended.rules,
+            '@typescript-eslint/no-unused-expressions': 'off'
+        }
+    },
+    {
+        files: ['e2e/**/*.ts'],
         languageOptions: {
             globals: {
                 ...globals.vitest
             }
-        }
-    },
-    pluginVue.configs['flat/essential'],
-    vueTsConfigs.recommended,
-    {
-        files: ['**/src/*.vue'],
-        languageOptions: {
-            globals: {
-                ...globals.vue
-            }
-        }
-    },
-    {
-        ...pluginVitest.configs.recommended,
-        files: ['src/**/__tests__/*'],
-        languageOptions: {
-            globals: {
-                ...globals.vitest
-            }
-        }
-    },
-    {
+        },
         ...pluginPlaywright.configs['flat/recommended'],
-        files: ['e2e/**/*.{test,spec}.{js,ts,jsx,tsx}'],
-        languageOptions: {
-            globals: {
-                ...globals.vitest
-            }
-        }
-    }
+        ...pluginVitest.configs.recommended
+    },
+    configsPrettierVue
 );

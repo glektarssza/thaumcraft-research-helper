@@ -80,6 +80,7 @@
         "@vitest/coverage-istanbul": "^4.0.17",
         "@vitest/eslint-plugin": "^1.6.6",
         "@vitest/ui": "^4.0.17",
+        "@vue/eslint-config-prettier": "^10.2.0",
         "@vue/eslint-config-typescript": "^14.6.0",
         "@vue/language-plugin-pug": "^3.2.2",
         "@vue/test-utils": "^2.4.6",
