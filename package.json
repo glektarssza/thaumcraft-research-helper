@@ -98,6 +98,7 @@
         "jsdom": "^27.1.0",
         "playwright": "^1.57.0",
         "prettier": "^3.7.4",
+        "pug": "^3.0.3",
         "sass-embedded": "^1.97.2",
         "tsx": "^4.21.0",
         "typescript": "^5.9.3",
