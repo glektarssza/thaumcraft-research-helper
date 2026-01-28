@@ -73,7 +73,7 @@
         "@rollup/plugin-replace": "^6.0.3",
         "@tsconfig/node24": "^24.0.4",
         "@types/jsdom": "^27.0.0",
-        "@types/node": "^25.0.8",
+        "@types/node": "^25.1.0",
         "@vitejs/plugin-vue": "6.0.3",
         "@vitest/browser": "^4.0.17",
         "@vitest/browser-playwright": "^4.0.17",
