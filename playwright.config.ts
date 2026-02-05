@@ -34,7 +34,8 @@ export default defineConfig({
     ],
     outputDir: '.playwright',
     webServer: {
-        command: process.env.CI !== undefined ? 'pnpm run preview' : 'pnpm run dev',
+        command:
+            process.env.CI !== undefined ? 'pnpm run preview' : 'pnpm run dev',
         port: process.env.CI !== undefined ? 4173 : 5173,
         reuseExistingServer: process.env.CI !== undefined ? false : true
     }
