@@ -5,6 +5,7 @@ updates:
     package-ecosystem: npm
     labels:
       - Dependency
+    versioning-strategy: increase
     schedule:
       interval: weekly
       day: wednesday
