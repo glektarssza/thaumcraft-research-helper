@@ -3,8 +3,16 @@ version: 2
 updates:
   - directory: /
     package-ecosystem: npm
+    groups:
+      development-version-updates:
+        dependency-type: development
+        applies-to: version-updates
+      production-version-updates:
+        dependency-type: production
+        applies-to: version-updates
     labels:
       - Dependency
+    versioning-strategy: increase
     schedule:
       interval: weekly
       day: wednesday
