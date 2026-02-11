@@ -64,7 +64,7 @@
         "rebuild:dev": "pnpm run clean:dev && pnpm run build:dev"
     },
     "dependencies": {
-        "vue": "^3.5.27"
+        "vue": "^3.5.28"
     },
     "devDependencies": {
         "@eslint/js": "^9.39.2",
