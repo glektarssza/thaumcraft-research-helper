@@ -10,8 +10,8 @@ A simple, web-based research helper for older versions of Thaumcraft.
 
 ## License ##
 
-Copyright (c) 2025 - present G'lek Tarssza
+Copyright (c) 2025 to present G'lek Tarssza
 
-All rights reserved.
+Licensed under a modified MIT License.
 
 See [LICENSE.md](LICENSE.md) for the full license.
