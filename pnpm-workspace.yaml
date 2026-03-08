@@ -1,3 +1,9 @@
+# yaml-language-server: $schema=https://json.schemastore.org/pnpm-workspace.json
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - esbuild
+trustPolicy: 'off'
+enablePrePostScripts: true
+shellEmulator: true
+publishBranch: main
+packageManagerStrict: true
