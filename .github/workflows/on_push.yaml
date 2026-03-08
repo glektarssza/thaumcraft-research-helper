@@ -15,8 +15,9 @@ jobs:
           - development
     uses: ./.github/workflows/build.yaml
     with:
-      ref: ${{github.ref}}
+      git-ref: ${{github.ref}}
       build-type: ${{matrix.build-type}}
+      upload-artifacts: true
     secrets:
       github-token: ${{secrets.GITHUB_TOKEN}}
   test:
@@ -26,7 +27,7 @@ jobs:
       contents: read
     uses: ./.github/workflows/test.yaml
     with:
-      ref: ${{github.ref}}
+      git-ref: ${{github.ref}}
     secrets:
       github-token: ${{secrets.GITHUB_TOKEN}}
   lint:
@@ -36,13 +37,13 @@ jobs:
       contents: read
     uses: ./.github/workflows/lint.yaml
     with:
-      ref: ${{github.ref}}
+      git-ref: ${{github.ref}}
     secrets:
       github-token: ${{secrets.GITHUB_TOKEN}}
   spell-check:
     name: Spell Check
     uses: ./.github/workflows/spell-check.yaml
     with:
-      ref: ${{github.ref}}
+      git-ref: ${{github.ref}}
     secrets:
       github-token: ${{secrets.GITHUB_TOKEN}}

@@ -3,7 +3,7 @@ name: Lint
 on:
   workflow_call:
     inputs:
-      ref:
+      git-ref:
         description: |
           The Git reference to operate on.
         type: string
@@ -22,7 +22,7 @@ jobs:
         name: Checkout repository
         uses: actions/checkout@v6
         with:
-          ref: ${{inputs.ref}}
+          ref: ${{inputs.git-ref}}
           lfs: true
           submodules: recursive
           show-progress: true
