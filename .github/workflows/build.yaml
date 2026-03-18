@@ -83,19 +83,21 @@ jobs:
           submodules: recursive
           show-progress: true
           token: ${{secrets.github-token || secrets.GITHUB_TOKEN}}
-      - id: setup-pnpm
-        name: Setup pnpm
-        uses: pnpm/action-setup@v5
-        with:
-          run_install: false
       - id: setup-nodejs
         name: Setup NodeJS
         uses: actions/setup-node@v6
         with:
           node-version-file: .nvmrc
-          cache: pnpm
-          cache-dependency-path: ./pnpm-lock.yaml
           token: ${{secrets.github-token || secrets.GITHUB_TOKEN}}
+      - id: setup-pnpm
+        name: Setup pnpm
+        uses: pnpm/action-setup@v5
+        with:
+          package_json_file: ./package.json
+          run_install: false
+          standalone: false
+          cache: true
+          cache_dependency_path: ./pnpm-lock.yaml
       - id: install-dependencies
         name: Install dependencies
         run: pnpm install
