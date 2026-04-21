@@ -1,14 +1,12 @@
 {
     "recommendations": [
+        "maxking.forgejo-vscode",
         "EditorConfig.EditorConfig",
         "streetsidesoftware.code-spell-checker",
-        "github.remotehub",
-        "github.vscode-pull-request-github",
-        "github.vscode-github-actions",
         "esbenp.prettier-vscode",
         "dbaeumer.vscode-eslint",
+        "Vue.volar",
         "vitest.explorer",
-        "ms-playwright.playwright",
-        "Vue.volar"
+        "ms-playwright.playwright"
     ]
 }
